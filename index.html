@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar</title>
+  <!--BOOTSTRAP-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!--NAVBAR-->
+  
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Kan-gym</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Práctica</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Consulta</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  
+
+<!--BOTONES SUPERIORES-->
+
+  <!--KANJI ALEATORIO-->
+  <div class="card border-0 mt-4" style="height: 15vh;">
+    <div class="container" style="height: 100%;">
+      <div class="row">
+        <div class="col-4">
+          <button id="aleatorio" onclick="aleatorio()" type="button" class="btn btn-dark btn-lg btn-block">Aleatorio</button>
+        </div>
+  <!--KANJI POR COMPONENTE-->
+        <div class="col-4">
+          <button type="button" class="btn btn-dark btn-lg btn-block" data-toggle="modal" data-target="#exampleModal">
+  Por componente
+          </button>
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Componentes</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <button id="suelo" onclick="porComponente('suelo')" type="button" data-dismiss="modal" class="btn btn-dark btn-lg btn-block">Suelo</button>
+                  <button id="techo" onclick="porComponente('techo')" type="button" data-dismiss="modal" class="btn btn-dark btn-lg btn-block">Techo</button>
+                  <button id="uno" onclick="porComponente('uno')" type="button" data-dismiss="modal" class="btn btn-dark btn-lg btn-block">Uno</button>
+                  <button id="boca" onclick="porComponente('boca')" type="button" data-dismiss="modal" class="btn btn-dark btn-lg btn-block">Boca</button>
+                  <button id="piernas" onclick="porComponente('piernas')" type="button" data-dismiss="modal" class="btn btn-dark btn-lg btn-block">Piernas</button>
+                  <button id="pictograma" onclick="porComponente('pictograma')" type="button" data-dismiss="modal" class="btn btn-dark btn-lg btn-block">Pictograma</button>
+                  <button id="chistera" onclick="porComponente('chistera')" type="button" data-dismiss="modal" class="btn btn-dark btn-lg btn-block">Chistera</button>
+                  <button id="patas" onclick="porComponente('patas')" type="button" data-dismiss="modal" class="btn btn-dark btn-lg btn-block">Patas</button>
+                  <button id="bate de baseball" onclick="porComponente('bate de baseball')" type="button" data-dismiss="modal" class="btn btn-dark btn-lg btn-block">Bate de baseball</button>
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div>
+  <!--KANJI POR FAMILIA SEMÁNTICA-->
+        <div class="col-4">
+          <button type="button" class="btn btn-dark btn-lg btn-block" data-toggle="modal" data-target="#exampleModal2">
+            Por familia
+          </button>
+          <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel2">Familias semánticas</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <button id="números" onclick="porFamilia('números')" type="button" data-dismiss="modal" class="btn btn-dark btn-lg btn-block">Números</button>
+                  <button id="naturaleza" onclick="porFamilia('naturaleza')" type="button" data-dismiss="modal" class="btn btn-dark btn-lg btn-block">Naturaleza</button>
+                  <button id="cosas" onclick="porFamilia('cosas')" type="button" data-dismiss="modal" class="btn btn-dark btn-lg btn-block">Cosas</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--VISOR DE KANJI-->
+  <div class="card border-0" >
+    <div class="container">
+      <div class="row justify-content-end">
+        <div class="col-7">
+          <div class="card" style="height: 65vh; margin-bottom: 20px;">
+            <div class="card header text-center bg-dark text-white">
+              <h1 id="nombreKanji">Elige una categoría</h1>
+            </div>
+            <div class="card-body" style="height: 100%;">
+              <img class="image-card-top mh-100 mx-auto d-block" id="imagenKanji" src="sumie.png" alt="Kanji">
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm text-center">
+                  <h3 class="rounded bg-dark text-light" id="trazosKanji">画</h3>
+                </div>
+                <div class="col-sm text-center">
+                  <h3 class="rounded bg-dark text-light" id="heisigKanji">KPR</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<!--BOTONES Y VISOR DE PISTAS-->
+        <div class="col-3">
+          <div class="row">
+            <button type="button" onclick="verKanji()" class="btn btn-dark btn-lg btn-block">Ver Kanji</button>
+          </div>
+          <hr>
+          <div class="row">
+            <button type="button" onclick="verPista()" class="btn btn-dark btn-lg btn-block ">Pista</button>
+          </div>
+          <hr>
+          <div class="row" style="height: 228px;">
+            <p id="pista"> </p>
+          </div>
+          <div class="row align-self-end" id="siguiente">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
